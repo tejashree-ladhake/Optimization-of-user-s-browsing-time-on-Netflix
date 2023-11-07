@@ -5,18 +5,18 @@ The project aims to optimize the average browsing time. We tested the four facto
 
 optimal condition - `Preview Length` = 70, `Match Score` = 76, `Preview Type` = "Teaser/Trailer", `Tile Size` could be any number between 0.1 and 0.5
 
-predicted browse time - 11.0770
+predicted browse time - 11.0770 minutes
 
-95% prediction interval for browse time - [10.8160, 11.3380]
+95% prediction interval for browse time - [10.8160, 11.3380] minutes
 
 ## Introduction
 
 The interest of this problem lies into minimizing the user’s browsing time before clicking into any one of the recommended movies presented to them. Four design factors were chosen for this experiment:
 
-- Tile Size - [0.1, 0.5]
-- Match Score - [0, 100]
-- Preview Length -  [30, 120]
-- Preview Type - [Teaser/Trailer, Actual Content]
+- Tile Size - The ratio of a tile’s height to the overall screen height [0.1, 0.5]
+- Match Score - A prediction of how much you will enjoy watching the show or movie, based on your viewing history. [0, 100]
+- Preview Length -  The duration (in seconds) of a show or movie’s preview. [30, 120]
+- Preview Type - The type of preview that is autoplayed. [Teaser/Trailer, Actual Content]
 
 First, we started off with the series of factorial experiments to learn which factors influence the browsing time and how that may be exploited to minimize the browsing time. We tested on the 4-way interaction, then the 3-way interaction, then the 2-way interaction, and then the main effect. At each step, as the interactions are not significant, we keep on reducing the models by dropping these interactions. Finally, we used a surface response experiment to find the optimal value of the influential factors.
 
