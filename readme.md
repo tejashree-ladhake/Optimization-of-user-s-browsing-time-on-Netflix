@@ -15,7 +15,7 @@ The interest of this problem lies into minimizing the user’s browsing time bef
 
 - Tile Size - The ratio of a tile’s height to the overall screen height [0.1, 0.5]
 - Match Score - A prediction of how much you will enjoy watching the show or movie, based on your viewing history. [0, 100]
-- Preview Length -  The duration (in seconds) of a show or movie’s preview. [30, 120]
+- Preview Length -  The duration (in seconds) of a show or movie’s preview. [30, 120] in increments of 5 secs
 - Preview Type - The type of preview that is autoplayed. [Teaser/Trailer, Actual Content]
 
 First, we started off with the series of factorial experiments to learn which factors influence the browsing time and how that may be exploited to minimize the browsing time. We tested on the 4-way interaction, then the 3-way interaction, then the 2-way interaction, and then the main effect. At each step, as the interactions are not significant, we keep on reducing the models by dropping these interactions. Finally, we used a surface response experiment to find the optimal value of the influential factors.
